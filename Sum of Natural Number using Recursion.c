@@ -2,13 +2,13 @@
 
 int sum(int n)
 {
-    int i=0,m=0;
-    if (i<=n)
-    {
-        i++;
-        m=sum(n+1);
-    }
-    
+   if (n==0)
+   
+    return 0;
+   
+   else
+     return sum(n-1)+n;
+   
 }
 
 int main()
