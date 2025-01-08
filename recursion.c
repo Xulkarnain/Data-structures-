@@ -57,18 +57,53 @@
 
 // tail recursion : recursive call is the last statement in the function
 
+// void fun(int n)
+// {
+//     if (n > 0)
+//     {
+//         printf("%d ", n);
+//         fun(n - 1);
+//     }
+// }
+
+// void main()
+// {
+//     int x = 3;
+//     fun(x);
+// }
+
+// head recursion : recursive call is the first statement in the function
+
+// void fun(int n)  //head recursion    
+// {    
+//     if(n>0)
+//     {
+//         fun(n-1);
+//         printf("%d ",n);
+//     }
+// }
+
+// void main()
+// {
+//     int x=3;
+//     fun(x);
+// }
+
+
+// tree recursion : a function calling itself more than one time
+
 void fun(int n)
 {
-    if (n > 0)
+    if(n>0)
     {
-        printf("%d ", n);
-        fun(n - 1);
+        printf("%d ",n);
+        fun(n-1);
+        fun(n-1);
     }
 }
 
 void main()
 {
-    int x = 3;
+    int x=3;
     fun(x);
 }
-
