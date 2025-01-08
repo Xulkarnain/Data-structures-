@@ -110,29 +110,46 @@
 
 // indirect recursion : function calling another function and that function calling the first function
 
-void fun1(int n);
-void fun2(int n);
+// void fun1(int n);
+// void fun2(int n);
 
- void fun2(int n)
+//  void fun2(int n)
+// {
+//     if(n>0)
+//     {
+//         printf("%d ",n);
+//         fun1(n-1);
+//     }
+// }
+
+// void fun1(int n)
+// {
+//     if(n>1)
+//     {
+//         printf("%d ",n);
+//         fun2(n/2);
+//     }
+// }
+
+// void main()
+// {
+//     int x=20;
+//     fun2(x);
+// }
+
+// nested recursion : recursive function calling itself with the parameter as recursive call
+
+ int fun(int n)
 {
-    if(n>0)
-    {
-        printf("%d ",n);
-        fun1(n-1);
-    }
+    if(n>100)
+        return n-10;
+    return fun(fun(n+11));
 }
 
-void fun1(int n)
+int main()
 {
-    if(n>1)
-    {
-        printf("%d ",n);
-        fun2(n/2);
-    }
-}
-
-void main()
-{
-    int x=20;
-    fun2(x);
+    int r;
+    r=fun(95);
+    printf("%d\n",r);
+    return 0;
 }
